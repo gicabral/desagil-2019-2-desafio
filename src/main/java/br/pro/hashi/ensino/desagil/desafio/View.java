@@ -75,8 +75,6 @@ public class View extends JPanel {
         g2.drawString("Computador: " + cpuPlayer.getPoints() + "pts", width / 2, height / 2 - 10);
 
 
-
-
         elementsToImages.forEach((element, image) -> {
             int row = element.getRow();
             int col = element.getCol();

@@ -1,7 +1,6 @@
 package br.pro.hashi.ensino.desagil.desafio;
 
 import br.pro.hashi.ensino.desagil.desafio.model.Model;
-import br.pro.hashi.ensino.desagil.desafio.model.Player;
 
 import javax.swing.*;
 
