@@ -1,8 +1,6 @@
 package br.pro.hashi.ensino.desagil.desafio;
 
-import br.pro.hashi.ensino.desagil.desafio.model.Board;
-import br.pro.hashi.ensino.desagil.desafio.model.Element;
-import br.pro.hashi.ensino.desagil.desafio.model.Model;
+import br.pro.hashi.ensino.desagil.desafio.model.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -64,6 +62,20 @@ public class View extends JPanel {
                 g.fillRect(j * CELL_SIZE, i * CELL_SIZE, CELL_SIZE, CELL_SIZE);
             }
         }
+
+
+        Graphics2D g2 = (Graphics2D) g;
+        HumanPlayer humanPlayer = model.getHumanPlayer();
+        CpuPlayer cpuPlayer = model.getCpuPlayer();
+
+        int width = board.getNumCols() * CELL_SIZE;
+        int height = board.getNumRows() * CELL_SIZE;
+        g2.setColor(Color.RED);
+        g2.drawString("Jogador: " + humanPlayer.getPoints() + "pts", width / 2 + 2, height / 2);
+        g2.drawString("Computador: " + cpuPlayer.getPoints() + "pts", width / 2, height / 2 - 10);
+
+
+
 
         elementsToImages.forEach((element, image) -> {
             int row = element.getRow();
